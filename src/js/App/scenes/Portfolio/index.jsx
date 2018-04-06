@@ -7,8 +7,10 @@ import Browser from './components/Browser';
 import Mobile from './components/Mobile';
 
 
-const Portfolio = ({ projects, slug }) => {
-    const project = find(projects, p => p.slug === slug);
+const Portfolio = ({ projects, match }) => {
+    const project = find(projects, p => p.slug === match.params.slug);
+
+    console.log(project);
 
     return (
         <div>

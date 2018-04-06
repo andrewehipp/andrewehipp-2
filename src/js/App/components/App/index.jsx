@@ -1,8 +1,5 @@
 import React from 'react';
-import Router from 'preact-router';
-import {
-    createHashHistory,
-} from 'history';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 
 import projects from '../../data/projects';
@@ -11,11 +8,11 @@ import Home from '../../scenes/Home';
 import Portfolio from '../../scenes/Portfolio';
 
 
-const handleRoute = (props) => {
-    if (props.url !== props.previous) {
-        window.scrollTo(0, 0);
-    }
-};
+// const handleRoute = (props) => {
+//     if (props.url !== props.previous) {
+//         window.scrollTo(0, 0);
+//     }
+// };
 
 
 export default class App extends React.Component {
@@ -25,10 +22,12 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <Router onChange={handleRoute} history={createHashHistory()}>
-                <Home path="/" projects={projects} />
-                <Portfolio path="/project/:slug" projects={projects} />
-            </Router>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <div>
+                    <Route exact path="/" component={props => <Home projects={projects} {...props} />} />
+                    <Route exact path="/project/:slug" component={props => <Portfolio projects={projects} {...props} />} />
+                </div>
+            </BrowserRouter>
         );
     }
 }

@@ -51,7 +51,7 @@ const projectsConfig = [
 ];
 
 
-const Home = ({ projects }) => (
+const Home = ({ projects, ...props }) => (
     <section className="o-on-top u-spacing-far u-pull-into-footer">
         <div className="o-project">
             <div className="o-project__aside">
@@ -74,6 +74,7 @@ const Home = ({ projects }) => (
                     className="u-pull-into-header"
                     projects={projects}
                     projectsConfig={projectsConfig}
+                    {...props}
                 />
 
             </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import find from 'lodash/find';
-import { route } from 'preact-router';
 
 
 import Card from 'App/components/Card';
@@ -25,6 +24,8 @@ export default class ProjectList extends React.Component {
             projectsConfig,
             className,
         } = this.props;
+
+        console.log(this.props);
 
         const projectListClassName = classNames(
             'o-list-unstyled',
@@ -72,7 +73,7 @@ export default class ProjectList extends React.Component {
                             leavingIndex: projectConfigIndex,
                         }, () => {
                             window.setTimeout(() => {
-                                route(`project/${project.slug}`);
+                                this.props.history.push(`project/${project.slug}`);
                             }, projectsConfig.length * 60);
                         });
                     };
