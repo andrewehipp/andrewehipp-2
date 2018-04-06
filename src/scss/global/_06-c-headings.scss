@@ -1,0 +1,22 @@
+/* ------------------------------------ *\
+    #HEADINGS
+\* ------------------------------------ */
+
+.c-heading-page {
+    @include rfz(28px, 36px);
+
+    line-height: (39px / 36px);
+}
+
+.c-heading-section {
+    @include rfz(26px, 30px);
+}
+
+.c-heading-title {
+    @include rfz(24px, 26px);
+}
+
+
+.c-heading-subtitle {
+    @include rfz(16px, 18px);
+}

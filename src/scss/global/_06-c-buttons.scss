@@ -1,0 +1,55 @@
+/* ------------------------------------ *\
+    #BUTTONS
+\* ------------------------------------ */
+
+.c-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: em(8px, 20px) em(15px, 20px);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: color('link');
+    background: #eee;
+    font-size: 0.825rem;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: timer('fast');
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+/**
+ * Modifiers for the buttons
+ */
+.c-btn--green {
+    background: color('green');
+    color: #fff;
+
+    &:hover {
+        text-decoration: none;
+        background: lighten(color('green'), 5%);
+    }
+}
+
+.c-btn--white {
+    background: #fff;
+    color: color('green');
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.c-btn--white-outlined {
+    border-color: currentColor;
+    color: darken(#fff, 20%);
+    background: transparent;
+
+    &:hover {
+        color: #fff;
+    }
+}

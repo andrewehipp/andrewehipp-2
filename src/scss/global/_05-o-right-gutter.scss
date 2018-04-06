@@ -1,0 +1,9 @@
+/* ------------------------------------ *\
+    #RIGHT GUTTER
+\* ------------------------------------ */
+
+.o-right-gutter {
+    @include media('sm') {
+        padding-right: spacer(2);
+    }
+}

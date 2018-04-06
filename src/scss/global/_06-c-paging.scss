@@ -1,0 +1,17 @@
+/* ------------------------------------ *\
+    #PAGING
+\* ------------------------------------ */
+
+.c-paging {
+    margin-bottom: spacer(1.5);
+}
+
+.c-paging__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-paging__list-item {
+    flex: 0 0 auto;
+    width: 50%;
+}

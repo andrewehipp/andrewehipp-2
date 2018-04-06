@@ -1,0 +1,25 @@
+/* ------------------------------------ *\
+    #SHADOW
+\* ------------------------------------ */
+
+.c-shadow {
+    position: relative;
+    z-index: 0;
+    perspective: 100px;
+
+    &::before {
+        content: '';
+        display: block;
+        opacity: 0.5;
+        margin-top: spacer(0.25);
+        width: 94%;
+        height: 10px;
+        background: linear-gradient(0deg, #000 0%, transparent 100%);
+        filter: blur(5px);
+        position: absolute;
+        top: 100%;
+        left: 3%;
+        z-index: -1;
+        transform: rotateX(10deg);
+    }
+}

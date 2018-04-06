@@ -1,0 +1,12 @@
+///
+/// RESPONSIVE FONT SIZE
+///
+/// @param {boolean} $parent [true] - Can include the parent selector too if set to
+///
+@mixin rfz($min-font-size, $max-font-size) {
+    font-size: calc(#{$min-font-size} + (#{$max-font-size / 1px} - #{$min-font-size / 1px}) * (100vw - 320px) / (1600 - 320));
+
+    @include media('xl') {
+        font-size: $max-font-size;
+    }
+}

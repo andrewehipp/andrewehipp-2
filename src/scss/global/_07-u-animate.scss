@@ -1,0 +1,35 @@
+/* ------------------------------------ *\
+    #ANIMATE UTILITIES
+\* ------------------------------------ */
+
+@keyframes enter {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+.u-animate {
+    will-change: opacity, transform;
+    animation: enter timer('normal') ease forwards paused;
+
+    &.is-animating {
+        animation-play-state: running;
+    }
+}
+
+.u-animate-fade {
+    opacity: 0;
+    will-change: opacity;
+    transition: timer('normal') ease-out;
+
+    &.is-animating {
+        opacity: 1;
+    }
+}

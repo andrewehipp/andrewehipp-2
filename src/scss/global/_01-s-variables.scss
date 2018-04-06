@@ -1,0 +1,95 @@
+////
+/// VARIABLES
+////
+
+
+///
+// Base global defaults
+///
+$base-color:        #000;
+$base-font-family:  'Source Sans Pro', sans-serif;
+$base-font-size:    16px;
+$base-line-height:  1.5;
+
+
+
+
+
+/// Generic spacing unit
+$spacing-unit:      20px;
+
+
+///
+// Grid Configuration
+//
+// [1] Number of columns in the grid layout
+// [2] Breakpoints from '$breakpoints-config' to build the grid system with.
+//     Only include the ones you use. Use 'deprecated-selectors' in qa-debug to
+//     test when removing them.
+// [3] Column gutters, anything additional items other than `initial` builds
+//     out modifier classes
+// [4] Generate offset modifier classes for layout items that push content to
+//     the right as if the set number of columns was to the left of it.
+// [5] Generate source ordering modifier classes for layout items so you can
+//     swap the stacking on mobile verses desktop.
+///
+
+$grid-config: (
+    'columns':       12,
+    'breakpoints': (
+        'sm',
+        'md',
+        'lg'
+    ),
+    'gutters': (
+        'initial':   30px
+    ),
+    'offsets':       false,
+    'push-and-pull': false
+);
+
+
+// Store $grid-config map as variables...
+$grid-breakpoints:      map-get($grid-config, 'breakpoints');
+$grid-gutters:          map-get($grid-config, 'gutters');
+$grid-gutters-initial:  map-get($grid-gutters, 'initial');
+$grid-columns:          map-get($grid-config, 'columns');
+$grid-offsets:          map-get($grid-config, 'offsets');
+$grid-push-and-pull:    map-get($grid-config, 'push-and-pull');
+
+
+///
+// Colors
+///
+$color-config: (
+    'body':         #333,
+    'green':        #69cd00,
+    'red':          #e43700,
+    'purple':       #870295,
+    'black':        #303933,
+    'headings':     #00587d,
+    'primary':      #337ab7,
+    'link':         #337ab7,
+    'grey':         #666,
+);
+
+
+$gradient: linear-gradient(60deg, #69cd00 33%, #e43700 60%, #870295 100%);
+
+
+///
+// Timer Map for @function timer();
+///
+$timer-config: (
+    'normal':   0.4s,
+    'slow':    0.75s,
+    'fast':    0.15s,
+);
+
+
+///
+// Z-index Map for @function z();
+///
+$z-index-config: (
+    'example':   1000,
+);

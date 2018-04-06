@@ -1,0 +1,99 @@
+/* ------------------------------------ *\
+    #HEADER
+\* ------------------------------------ */
+
+.c-header {
+    overflow: hidden;
+    padding: 10px 0;
+    margin-bottom: spacer(1);
+    color: color('black');
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: bold;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 30px;
+        width: 100%;
+        background: color('black');
+        clip-path:
+            polygon(
+                0 0,
+                100% 0,
+                100% 100%,
+                0 calc(100% - 25px)
+            );
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    a {
+        color: inherit;
+
+        @include link-states() {
+            text-decoration: none;
+        }
+    }
+}
+
+.c-header__canvas {
+    left: 0;
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% calc(100% - 40px),
+            0 100%
+        );
+}
+
+.c-header__content {
+    padding: spacer(0.5) 0;
+
+    @include media('sm') {
+        padding: 3vmin 0;
+    }
+}
+
+
+.c-header__title {
+    color: color('body');
+
+    @include link-states() {
+        text-decoration: none;
+    }
+}
+
+.c-header__logo {
+    display: block;
+    margin-bottom: 0;
+    width: 40px;
+    height: auto;
+
+    @include media('sm') {
+        width: 64px;
+    }
+}
+
+.c-header__name {
+    @include rfz(24px, 30px);
+
+    margin-bottom: 0;
+}
+
+
+.c-header__contact {
+    margin-bottom: 0;
+}
+
+.c-header__lockup {
+    display: flex;
+    align-items: center;
+}
+
+.c-header__lockup-block {
+    margin-right: spacer(1);
+}

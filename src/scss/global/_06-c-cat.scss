@@ -1,0 +1,14 @@
+/* ------------------------------------ *\
+    #CATEGORY
+\* ------------------------------------ */
+
+.c-cat {
+    display: inline-block;
+    padding: 2px 5px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    background: lighten(color('grey'), 25%);
+    border-radius: 2px;
+    color: #fff;
+    font-size: rem(12px);
+}

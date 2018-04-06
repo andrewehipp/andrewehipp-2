@@ -1,0 +1,25 @@
+/* ------------------------------------ *\
+    #SHRINKING BUTTON
+\* ------------------------------------ */
+
+
+@keyframes exit {
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+
+.c-shrinking-button {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    background: none;
+    animation: exit timer('normal') ease forwards paused;
+
+    &.is-shrinking {
+        animation-play-state: running;
+    }
+}
